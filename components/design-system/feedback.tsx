@@ -78,13 +78,13 @@ export function FeedbackSection() {
           <h3 className="text-sm font-semibold text-foreground">Dismissible Alerts</h3>
           <div className="space-y-4 max-w-2xl">
             <Alert className="relative">
-              <Bell className="h-4 w-4" />
+              <Notification01Icon className="size-4" />
               <AlertTitle>New Feature Available</AlertTitle>
               <AlertDescription>
                 Check out our new pipeline automation tools to streamline your workflow.
               </AlertDescription>
               <button className="absolute top-3 right-3 rounded-full p-1 hover:bg-muted">
-                <X className="h-4 w-4 text-muted-foreground" />
+                <Cancel01Icon className="size-4 text-muted-foreground" />
               </button>
             </Alert>
           </div>
@@ -155,15 +155,15 @@ export function FeedbackSection() {
             {/* Spinner */}
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2">
-                <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
+                <Loading01Icon className="size-4 animate-spin text-muted-foreground" />
                 <span className="text-sm text-muted-foreground">Small</span>
               </div>
               <div className="flex items-center gap-2">
-                <Loader2 className="h-6 w-6 animate-spin text-primary" />
+                <Loading01Icon className="size-6 animate-spin text-primary" />
                 <span className="text-sm text-muted-foreground">Medium</span>
               </div>
               <div className="flex items-center gap-2">
-                <Loader2 className="h-8 w-8 animate-spin text-primary" />
+                <Loading01Icon className="size-8 animate-spin text-primary" />
                 <span className="text-sm text-muted-foreground">Large</span>
               </div>
             </div>
@@ -171,17 +171,17 @@ export function FeedbackSection() {
             {/* Button Loading */}
             <div className="flex items-center gap-4">
               <Button disabled>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                <Loading01Icon className="mr-2 size-4 animate-spin" />
                 Saving...
               </Button>
               <Button variant="outline" disabled>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                <Loading01Icon className="mr-2 size-4 animate-spin" />
                 Loading...
               </Button>
               <Button onClick={handleLoading} disabled={isLoading}>
                 {isLoading ? (
                   <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    <Loading01Icon className="mr-2 size-4 animate-spin" />
                     Processing...
                   </>
                 ) : (
@@ -229,7 +229,7 @@ export function FeedbackSection() {
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-lg border border-border border-dashed p-8 text-center">
               <div className="mx-auto w-12 h-12 rounded-full bg-muted flex items-center justify-center mb-4">
-                <Info className="h-6 w-6 text-muted-foreground" />
+                <InformationCircleIcon className="size-6 text-muted-foreground" />
               </div>
               <h4 className="text-lg font-medium mb-2">No contacts yet</h4>
               <p className="text-sm text-muted-foreground mb-4">
