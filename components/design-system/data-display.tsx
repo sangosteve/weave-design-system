@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Progress } from "@/components/ui/progress"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { Button } from "@/components/ui/button"
-import { Info, HelpCircle } from "lucide-react"
+import { InformationCircleIcon, HelpCircleIcon } from "@hugeicons/react"
 
 export function DataDisplaySection() {
   return (
@@ -239,7 +239,7 @@ export function DataDisplaySection() {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Button variant="ghost" size="icon">
-                    <Info className="h-4 w-4" />
+                    <InformationCircleIcon size={16} />
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
@@ -251,7 +251,7 @@ export function DataDisplaySection() {
                 <TooltipTrigger asChild>
                   <span className="inline-flex items-center gap-1 text-sm cursor-help">
                     Deal Value
-                    <HelpCircle className="h-3 w-3 text-muted-foreground" />
+                    <HelpCircleIcon size={12} className="text-muted-foreground" />
                   </span>
                 </TooltipTrigger>
                 <TooltipContent className="max-w-xs">

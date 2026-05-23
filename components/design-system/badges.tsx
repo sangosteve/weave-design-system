@@ -1,6 +1,6 @@
 import { SectionHeader } from "./section-header"
 import { Badge } from "@/components/ui/badge"
-import { X } from "lucide-react"
+import { Cancel01Icon } from "@hugeicons/react"
 
 export function BadgesSection() {
   return (

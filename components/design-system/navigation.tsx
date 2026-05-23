@@ -14,9 +14,19 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { 
-  Home, Users, Settings, BarChart3, Mail, Phone, Calendar, 
-  FileText, ChevronRight, Building2, Target, MessageSquare
-} from "lucide-react"
+  Home01Icon, 
+  UserMultiple02Icon, 
+  Settings01Icon, 
+  AnalyticsUpIcon, 
+  Mail01Icon, 
+  Call02Icon, 
+  Calendar01Icon, 
+  File01Icon, 
+  ArrowRight01Icon, 
+  Building03Icon, 
+  Target02Icon, 
+  Comment01Icon 
+} from "@hugeicons/react"
 
 export function NavigationSection() {
   const [activeTab, setActiveTab] = useState("overview")
@@ -59,19 +69,19 @@ export function NavigationSection() {
             <Tabs defaultValue="contacts" className="w-full">
               <TabsList>
                 <TabsTrigger value="contacts" className="gap-2">
-                  <Users className="h-4 w-4" />
+                  <UserMultiple02Icon size={16} />
                   Contacts
                 </TabsTrigger>
                 <TabsTrigger value="deals" className="gap-2">
-                  <Target className="h-4 w-4" />
+                  <Target02Icon size={16} />
                   Deals
                 </TabsTrigger>
                 <TabsTrigger value="emails" className="gap-2">
-                  <Mail className="h-4 w-4" />
+                  <Mail01Icon size={16} />
                   Emails
                 </TabsTrigger>
                 <TabsTrigger value="calls" className="gap-2">
-                  <Phone className="h-4 w-4" />
+                  <Call02Icon size={16} />
                   Calls
                 </TabsTrigger>
               </TabsList>
@@ -125,14 +135,14 @@ export function NavigationSection() {
               <BreadcrumbList>
                 <BreadcrumbItem>
                   <BreadcrumbLink href="#" className="flex items-center gap-1">
-                    <Home className="h-4 w-4" />
+                    <Home01Icon size={16} />
                     Home
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
                   <BreadcrumbLink href="#" className="flex items-center gap-1">
-                    <Building2 className="h-4 w-4" />
+                    <Building03Icon size={16} />
                     Companies
                   </BreadcrumbLink>
                 </BreadcrumbItem>
@@ -157,32 +167,32 @@ export function NavigationSection() {
             <div className="rounded-lg border border-border p-4 w-64">
               <div className="space-y-1">
                 <Button variant="secondary" className="w-full justify-start gap-2">
-                  <Home className="h-4 w-4" />
+                  <Home01Icon size={16} />
                   Dashboard
                 </Button>
                 <Button variant="ghost" className="w-full justify-start gap-2">
-                  <Users className="h-4 w-4" />
+                  <UserMultiple02Icon size={16} />
                   Contacts
                 </Button>
                 <Button variant="ghost" className="w-full justify-start gap-2">
-                  <Building2 className="h-4 w-4" />
+                  <Building03Icon size={16} />
                   Companies
                 </Button>
                 <Button variant="ghost" className="w-full justify-start gap-2">
-                  <Target className="h-4 w-4" />
+                  <Target02Icon size={16} />
                   Deals
                 </Button>
                 <Button variant="ghost" className="w-full justify-start gap-2">
-                  <Calendar className="h-4 w-4" />
+                  <Calendar01Icon size={16} />
                   Calendar
                 </Button>
                 <Button variant="ghost" className="w-full justify-start gap-2">
-                  <BarChart3 className="h-4 w-4" />
+                  <AnalyticsUpIcon size={16} />
                   Reports
                 </Button>
                 <div className="border-t border-border my-2" />
                 <Button variant="ghost" className="w-full justify-start gap-2">
-                  <Settings className="h-4 w-4" />
+                  <Settings01Icon size={16} />
                   Settings
                 </Button>
               </div>
@@ -193,27 +203,27 @@ export function NavigationSection() {
               <div className="space-y-1">
                 <Button variant="ghost" className="w-full justify-between">
                   <span className="flex items-center gap-2">
-                    <Mail className="h-4 w-4" />
+                    <Mail01Icon size={16} />
                     Inbox
                   </span>
                   <Badge className="h-5 px-1.5 text-xs">23</Badge>
                 </Button>
                 <Button variant="ghost" className="w-full justify-between">
                   <span className="flex items-center gap-2">
-                    <MessageSquare className="h-4 w-4" />
+                    <Comment01Icon size={16} />
                     Messages
                   </span>
                   <Badge variant="destructive" className="h-5 px-1.5 text-xs">5</Badge>
                 </Button>
                 <Button variant="ghost" className="w-full justify-between">
                   <span className="flex items-center gap-2">
-                    <FileText className="h-4 w-4" />
+                    <File01Icon size={16} />
                     Tasks
                   </span>
                   <Badge className="h-5 px-1.5 text-xs bg-warning text-warning-foreground">12</Badge>
                 </Button>
                 <Button variant="ghost" className="w-full justify-start gap-2">
-                  <Phone className="h-4 w-4" />
+                  <Call02Icon size={16} />
                   Calls
                 </Button>
               </div>
@@ -266,33 +276,33 @@ export function NavigationSection() {
           <div className="rounded-lg border border-border divide-y divide-border max-w-md">
             <button className="w-full flex items-center justify-between p-4 hover:bg-muted/50 transition-colors">
               <div className="flex items-center gap-3">
-                <Users className="h-5 w-5 text-muted-foreground" />
+                <UserMultiple02Icon size={20} className="text-muted-foreground" />
                 <div className="text-left">
                   <p className="font-medium">Contacts</p>
                   <p className="text-sm text-muted-foreground">Manage your contacts</p>
                 </div>
               </div>
-              <ChevronRight className="h-5 w-5 text-muted-foreground" />
+              <ArrowRight01Icon size={20} className="text-muted-foreground" />
             </button>
             <button className="w-full flex items-center justify-between p-4 hover:bg-muted/50 transition-colors">
               <div className="flex items-center gap-3">
-                <Building2 className="h-5 w-5 text-muted-foreground" />
+                <Building03Icon size={20} className="text-muted-foreground" />
                 <div className="text-left">
                   <p className="font-medium">Companies</p>
                   <p className="text-sm text-muted-foreground">View company profiles</p>
                 </div>
               </div>
-              <ChevronRight className="h-5 w-5 text-muted-foreground" />
+              <ArrowRight01Icon size={20} className="text-muted-foreground" />
             </button>
             <button className="w-full flex items-center justify-between p-4 hover:bg-muted/50 transition-colors">
               <div className="flex items-center gap-3">
-                <Target className="h-5 w-5 text-muted-foreground" />
+                <Target02Icon size={20} className="text-muted-foreground" />
                 <div className="text-left">
                   <p className="font-medium">Deals</p>
                   <p className="text-sm text-muted-foreground">Track your pipeline</p>
                 </div>
               </div>
-              <ChevronRight className="h-5 w-5 text-muted-foreground" />
+              <ArrowRight01Icon size={20} className="text-muted-foreground" />
             </button>
           </div>
         </div>

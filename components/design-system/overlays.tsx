@@ -45,9 +45,9 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import { 
-  MoreHorizontal, Plus, Edit, Trash2, Copy, Mail, Phone, 
-  User, Building2, Calendar, Search, Check
-} from "lucide-react"
+  MoreHorizontalIcon, Add01Icon, Edit01Icon, Delete01Icon, Copy01Icon, Mail01Icon, Call02Icon, 
+  User03Icon, Building03Icon, Calendar01Icon, Search01Icon, Tick01Icon
+} from "@hugeicons/react"
 
 const contacts = [
   { value: "john-smith", label: "John Smith", email: "john@acme.com" },
@@ -200,31 +200,31 @@ export function OverlaysSection() {
               <DropdownMenuTrigger asChild>
                 <Button variant="outline">
                   Actions
-                  <MoreHorizontal className="ml-2 h-4 w-4" />
+                  <MoreHorizontalIcon size={16} className="ml-2" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start">
                 <DropdownMenuLabel>Actions</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>
-                  <Edit className="mr-2 h-4 w-4" />
+                  <Edit01Icon size={16} className="mr-2" />
                   Edit
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <Copy className="mr-2 h-4 w-4" />
+                  <Copy01Icon size={16} className="mr-2" />
                   Duplicate
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <Mail className="mr-2 h-4 w-4" />
+                  <Mail01Icon size={16} className="mr-2" />
                   Send Email
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <Phone className="mr-2 h-4 w-4" />
+                  <Call02Icon size={16} className="mr-2" />
                   Call
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem className="text-destructive">
-                  <Trash2 className="mr-2 h-4 w-4" />
+                  <Delete01Icon size={16} className="mr-2" />
                   Delete
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -233,21 +233,21 @@ export function OverlaysSection() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button>
-                  <Plus className="mr-2 h-4 w-4" />
+                  <Add01Icon size={16} className="mr-2" />
                   Create New
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem>
-                  <User className="mr-2 h-4 w-4" />
+                  <User03Icon size={16} className="mr-2" />
                   Contact
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <Building2 className="mr-2 h-4 w-4" />
+                  <Building03Icon size={16} className="mr-2" />
                   Company
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <Calendar className="mr-2 h-4 w-4" />
+                  <Calendar01Icon size={16} className="mr-2" />
                   Meeting
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -256,7 +256,7 @@ export function OverlaysSection() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="icon">
-                  <MoreHorizontal className="h-4 w-4" />
+                  <MoreHorizontalIcon size={16} />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">

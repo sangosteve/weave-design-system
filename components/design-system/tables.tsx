@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Checkbox } from "@/components/ui/checkbox"
-import { MoreHorizontal, ArrowUpDown, ChevronLeft, ChevronRight } from "lucide-react"
+import { MoreHorizontalIcon, ArrowUpDownIcon, ArrowLeft01Icon, ArrowRight01Icon } from "@hugeicons/react"
 
 const contacts = [
   { id: 1, name: "John Smith", email: "john@acme.com", company: "Acme Inc.", status: "Active", value: "$25,000", stage: "qualified" },

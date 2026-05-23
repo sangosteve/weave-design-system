@@ -6,7 +6,15 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Button } from "@/components/ui/button"
 import { useToast } from "@/hooks/use-toast"
 import { Toaster } from "@/components/ui/toaster"
-import { AlertCircle, CheckCircle2, Info, AlertTriangle, X, Bell, Loader2 } from "lucide-react"
+import { 
+  AlertCircleIcon, 
+  CheckmarkCircle02Icon, 
+  InformationCircleIcon, 
+  Alert02Icon, 
+  Cancel01Icon, 
+  Notification01Icon, 
+  Loading01Icon 
+} from "@hugeicons/react"
 
 export function FeedbackSection() {
   const { toast } = useToast()
@@ -32,7 +40,7 @@ export function FeedbackSection() {
           <h3 className="text-sm font-semibold text-foreground">Alerts</h3>
           <div className="space-y-4 max-w-2xl">
             <Alert>
-              <Info className="h-4 w-4" />
+              <InformationCircleIcon className="size-4" />
               <AlertTitle>Information</AlertTitle>
               <AlertDescription>
                 This is an informational alert. It provides helpful context without requiring action.
@@ -40,7 +48,7 @@ export function FeedbackSection() {
             </Alert>
             
             <Alert className="border-success bg-success/10">
-              <CheckCircle2 className="h-4 w-4 text-success" />
+              <CheckmarkCircle02Icon className="size-4 text-success" />
               <AlertTitle className="text-success">Success</AlertTitle>
               <AlertDescription>
                 Your changes have been saved successfully. The contact has been updated.
@@ -48,7 +56,7 @@ export function FeedbackSection() {
             </Alert>
             
             <Alert className="border-warning bg-warning/10">
-              <AlertTriangle className="h-4 w-4 text-warning" />
+              <Alert02Icon className="size-4 text-warning" />
               <AlertTitle className="text-warning">Warning</AlertTitle>
               <AlertDescription>
                 This deal is approaching its close date. Consider following up with the contact.
@@ -56,7 +64,7 @@ export function FeedbackSection() {
             </Alert>
             
             <Alert variant="destructive">
-              <AlertCircle className="h-4 w-4" />
+              <AlertCircleIcon className="size-4" />
               <AlertTitle>Error</AlertTitle>
               <AlertDescription>
                 Failed to save changes. Please check your connection and try again.

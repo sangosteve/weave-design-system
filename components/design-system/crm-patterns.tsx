@@ -6,9 +6,17 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { 
-  MoreHorizontal, Plus, Phone, Mail, Calendar, Clock,
-  ArrowRight, MessageSquare, FileText, User
-} from "lucide-react"
+  MoreHorizontalIcon,
+  Add01Icon,
+  Call02Icon,
+  Mail01Icon,
+  Calendar03Icon,
+  Time02Icon,
+  ArrowRight01Icon,
+  Message01Icon,
+  File01Icon,
+  User03Icon
+} from "@hugeicons/react"
 
 const pipelineStages = [
   { name: "New", count: 12, color: "var(--stage-new)", value: "$45,000" },
@@ -19,10 +27,10 @@ const pipelineStages = [
 ]
 
 const activities = [
-  { type: "call", contact: "John Smith", action: "Call completed", time: "2 hours ago", icon: Phone },
-  { type: "email", contact: "Emily Davis", action: "Email sent", time: "4 hours ago", icon: Mail },
-  { type: "meeting", contact: "Mike Chen", action: "Meeting scheduled", time: "Yesterday", icon: Calendar },
-  { type: "note", contact: "Sarah Johnson", action: "Note added", time: "2 days ago", icon: FileText },
+  { type: "call", contact: "John Smith", action: "Call completed", time: "2 hours ago", icon: Call02Icon },
+  { type: "email", contact: "Emily Davis", action: "Email sent", time: "4 hours ago", icon: Mail01Icon },
+  { type: "meeting", contact: "Mike Chen", action: "Meeting scheduled", time: "Yesterday", icon: Calendar03Icon },
+  { type: "note", contact: "Sarah Johnson", action: "Note added", time: "2 days ago", icon: File01Icon },
 ]
 
 const kanbanCards = [
@@ -56,7 +64,7 @@ export function CRMPatternsSection() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">{stage.count}</div>
+                  <div className="text-2xl font-semibold">{stage.count}</div>
                   <p className="text-xs text-muted-foreground">{stage.value}</p>
                 </CardContent>
               </Card>
@@ -76,11 +84,11 @@ export function CRMPatternsSection() {
                       className="h-2 w-2 rounded-full" 
                       style={{ backgroundColor: pipelineStages[stageIndex === 0 ? 0 : stageIndex === 1 ? 2 : 3].color }}
                     />
-                    <span className="font-medium">{stage}</span>
+                    <span className="font-medium text-sm">{stage}</span>
                     <Badge variant="secondary" className="text-xs">{kanbanCards.length}</Badge>
                   </div>
-                  <Button variant="ghost" size="icon" className="h-8 w-8">
-                    <Plus className="h-4 w-4" />
+                  <Button variant="ghost" size="icon-sm">
+                    <Add01Icon className="size-4" />
                   </Button>
                 </div>
                 <div className="space-y-3">
@@ -89,14 +97,14 @@ export function CRMPatternsSection() {
                       <CardContent className="p-4">
                         <div className="flex items-start justify-between mb-2">
                           <h4 className="font-medium text-sm">{card.name}</h4>
-                          <Button variant="ghost" size="icon" className="h-6 w-6 -mr-2 -mt-1">
-                            <MoreHorizontal className="h-4 w-4" />
+                          <Button variant="ghost" size="icon-xs" className="-mr-2 -mt-1">
+                            <MoreHorizontalIcon className="size-4" />
                           </Button>
                         </div>
                         <p className="text-lg font-semibold mb-3">{card.value}</p>
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
-                            <Avatar className="h-6 w-6">
+                            <Avatar className="size-6">
                               <AvatarFallback className="text-xs bg-primary text-primary-foreground">
                                 {card.contact.split(' ').map(n => n[0]).join('')}
                               </AvatarFallback>
@@ -126,8 +134,8 @@ export function CRMPatternsSection() {
                 {activities.map((activity, index) => (
                   <div key={index} className="flex gap-3">
                     <div className="flex-shrink-0">
-                      <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
-                        <activity.icon className="h-4 w-4 text-muted-foreground" />
+                      <div className="size-8 rounded-full bg-muted flex items-center justify-center">
+                        <activity.icon className="size-4 text-muted-foreground" />
                       </div>
                     </div>
                     <div className="flex-1 min-w-0">
@@ -142,7 +150,7 @@ export function CRMPatternsSection() {
               </div>
               <Button variant="ghost" className="w-full mt-4 text-sm">
                 View All Activity
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight01Icon className="ml-2 size-4" />
               </Button>
             </CardContent>
           </Card>
@@ -161,7 +169,7 @@ export function CRMPatternsSection() {
                 key={index} 
                 className="flex items-center gap-4 p-4 rounded-lg border border-border hover:bg-muted/50 transition-colors cursor-pointer"
               >
-                <Avatar className="h-10 w-10">
+                <Avatar className="size-10">
                   <AvatarFallback className="bg-primary text-primary-foreground">
                     {contact.name.split(' ').map(n => n[0]).join('')}
                   </AvatarFallback>
@@ -185,11 +193,11 @@ export function CRMPatternsSection() {
                   <p className="text-xs text-muted-foreground">Deal Value</p>
                 </div>
                 <div className="flex gap-1">
-                  <Button variant="ghost" size="icon" className="h-8 w-8">
-                    <Phone className="h-4 w-4" />
+                  <Button variant="ghost" size="icon-sm">
+                    <Call02Icon className="size-4" />
                   </Button>
-                  <Button variant="ghost" size="icon" className="h-8 w-8">
-                    <Mail className="h-4 w-4" />
+                  <Button variant="ghost" size="icon-sm">
+                    <Mail01Icon className="size-4" />
                   </Button>
                 </div>
               </div>
@@ -215,7 +223,7 @@ export function CRMPatternsSection() {
             <CardContent className="p-4 space-y-4">
               {/* Agent Message */}
               <div className="flex gap-3">
-                <Avatar className="h-8 w-8">
+                <Avatar className="size-8">
                   <AvatarFallback className="text-xs bg-secondary text-secondary-foreground">AG</AvatarFallback>
                 </Avatar>
                 <div className="flex-1">
@@ -231,7 +239,7 @@ export function CRMPatternsSection() {
 
               {/* User Message */}
               <div className="flex gap-3 flex-row-reverse">
-                <Avatar className="h-8 w-8">
+                <Avatar className="size-8">
                   <AvatarFallback className="text-xs bg-primary text-primary-foreground">JS</AvatarFallback>
                 </Avatar>
                 <div className="flex-1 flex flex-col items-end">
@@ -247,7 +255,7 @@ export function CRMPatternsSection() {
 
               {/* Highlighted Message */}
               <div className="flex gap-3">
-                <Avatar className="h-8 w-8">
+                <Avatar className="size-8">
                   <AvatarFallback className="text-xs bg-secondary text-secondary-foreground">AG</AvatarFallback>
                 </Avatar>
                 <div className="flex-1">
@@ -269,10 +277,10 @@ export function CRMPatternsSection() {
                 <input 
                   type="text" 
                   placeholder="Type a message..." 
-                  className="flex-1 rounded-md border border-input bg-background px-3 py-2 text-sm"
+                  className="flex-1 rounded-lg border border-input bg-background px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 />
                 <Button size="icon">
-                  <MessageSquare className="h-4 w-4" />
+                  <Message01Icon className="size-4" />
                 </Button>
               </div>
             </div>
@@ -284,23 +292,23 @@ export function CRMPatternsSection() {
           <h3 className="text-sm font-semibold text-foreground">Quick Action Bar</h3>
           <div className="flex flex-wrap gap-2 p-4 rounded-lg border border-border bg-muted/30 max-w-2xl">
             <Button size="sm" variant="outline" className="gap-2">
-              <Phone className="h-4 w-4" />
+              <Call02Icon className="size-4" />
               Log Call
             </Button>
             <Button size="sm" variant="outline" className="gap-2">
-              <Mail className="h-4 w-4" />
+              <Mail01Icon className="size-4" />
               Send Email
             </Button>
             <Button size="sm" variant="outline" className="gap-2">
-              <Calendar className="h-4 w-4" />
+              <Calendar03Icon className="size-4" />
               Schedule Meeting
             </Button>
             <Button size="sm" variant="outline" className="gap-2">
-              <FileText className="h-4 w-4" />
+              <File01Icon className="size-4" />
               Add Note
             </Button>
             <Button size="sm" variant="outline" className="gap-2">
-              <User className="h-4 w-4" />
+              <User03Icon className="size-4" />
               Create Task
             </Button>
           </div>
@@ -348,11 +356,11 @@ export function CRMPatternsSection() {
                 { title: "Review contract draft", time: "4:00 PM", priority: "low" },
               ].map((task, index) => (
                 <div key={index} className="flex items-center gap-3 p-3 rounded-lg border border-border">
-                  <input type="checkbox" className="h-4 w-4 rounded border-border" />
+                  <input type="checkbox" className="size-4 rounded border-border accent-primary" />
                   <div className="flex-1">
                     <p className="text-sm font-medium">{task.title}</p>
                     <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                      <Clock className="h-3 w-3" />
+                      <Time02Icon className="size-3" />
                       {task.time}
                     </div>
                   </div>

@@ -10,7 +10,15 @@ import { Switch } from "@/components/ui/switch"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Button } from "@/components/ui/button"
-import { Search, Mail, Phone, User, Calendar, DollarSign, Building2 } from "lucide-react"
+import { 
+  Search01Icon, 
+  Mail01Icon, 
+  Call02Icon, 
+  User03Icon, 
+  Calendar03Icon, 
+  DollarCircleIcon, 
+  Building03Icon 
+} from "@hugeicons/react"
 
 export function FormsSection() {
   const [switchValue, setSwitchValue] = useState(false)
@@ -37,7 +45,7 @@ export function FormsSection() {
             </div>
             <div className="space-y-2">
               <Label htmlFor="error">Error State</Label>
-              <Input id="error" placeholder="Invalid input" className="border-destructive focus-visible:ring-destructive" />
+              <Input id="error" placeholder="Invalid input" aria-invalid="true" />
               <p className="text-xs text-destructive">This field is required</p>
             </div>
           </div>
@@ -50,21 +58,21 @@ export function FormsSection() {
             <div className="space-y-2">
               <Label>Search</Label>
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                <Search01Icon className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
                 <Input placeholder="Search contacts..." className="pl-9" />
               </div>
             </div>
             <div className="space-y-2">
               <Label>Email</Label>
               <div className="relative">
-                <Mail className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                <Mail01Icon className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
                 <Input type="email" placeholder="john@example.com" className="pl-9" />
               </div>
             </div>
             <div className="space-y-2">
               <Label>Phone</Label>
               <div className="relative">
-                <Phone className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                <Call02Icon className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
                 <Input type="tel" placeholder="+1 (555) 000-0000" className="pl-9" />
               </div>
             </div>
@@ -78,28 +86,28 @@ export function FormsSection() {
             <div className="space-y-2">
               <Label>Contact Name</Label>
               <div className="relative">
-                <User className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                <User03Icon className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
                 <Input placeholder="John Smith" className="pl-9" />
               </div>
             </div>
             <div className="space-y-2">
               <Label>Company</Label>
               <div className="relative">
-                <Building2 className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                <Building03Icon className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
                 <Input placeholder="Acme Inc." className="pl-9" />
               </div>
             </div>
             <div className="space-y-2">
               <Label>Deal Value</Label>
               <div className="relative">
-                <DollarSign className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                <DollarCircleIcon className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
                 <Input type="number" placeholder="10,000" className="pl-9" />
               </div>
             </div>
             <div className="space-y-2">
               <Label>Close Date</Label>
               <div className="relative">
-                <Calendar className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                <Calendar03Icon className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
                 <Input type="date" className="pl-9" />
               </div>
             </div>
@@ -245,7 +253,7 @@ export function FormsSection() {
           <h3 className="text-sm font-semibold text-foreground">Complete Form Example</h3>
           <div className="rounded-lg border border-border p-6 max-w-xl">
             <h4 className="text-lg font-semibold mb-4">Add New Contact</h4>
-            <form className="space-y-4">
+            <form className="crm-form-spacing">
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="space-y-2">
                   <Label htmlFor="firstName">First Name</Label>
